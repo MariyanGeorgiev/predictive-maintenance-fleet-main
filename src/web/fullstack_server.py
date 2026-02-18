@@ -92,7 +92,10 @@ class FullStackHandler(BaseHTTPRequestHandler):
 def run_server(host: str = "127.0.0.1", port: int = 8787) -> None:
     """Run the full-stack HTTP server."""
     server = ThreadingHTTPServer((host, port), FullStackHandler)
+
+    access_host = "127.0.0.1" if host in {"0.0.0.0", "::"} else host
     print(f"Full-stack server running at http://{host}:{port}")
+    print(f"Open in browser: http://{access_host}:{port}/")
     print("Frontend: /app/ | API: /api/health, /api/summary")
     try:
         server.serve_forever()

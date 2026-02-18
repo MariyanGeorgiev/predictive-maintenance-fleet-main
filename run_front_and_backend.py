@@ -26,9 +26,11 @@ def main() -> None:
     args = parser.parse_args()
 
     if not args.no_browser:
+        browser_host = "127.0.0.1" if args.host in {"0.0.0.0", "::"} else args.host
+
         def open_browser() -> None:
             time.sleep(0.6)
-            webbrowser.open(f"http://{args.host}:{args.port}/")
+            webbrowser.open(f"http://{browser_host}:{args.port}/")
 
         threading.Thread(target=open_browser, daemon=True).start()
 
