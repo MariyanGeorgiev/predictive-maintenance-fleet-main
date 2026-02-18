@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictive Maintenance Fleet Dashboard</title>
+    <link rel="stylesheet" href="/app/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <header class="hero">
+      <div class="hero__badge">Fleet Intelligence Platform</div>
+      <h1>Predictive Maintenance Dashboard</h1>
+      <p>
+        Красив и изчистен интерфейс за бърз преглед на synthetic data pipeline-а,
+        operating режимите и здравето на backend API.
+      </p>
+      <a class="hero__cta" href="#overview">Виж детайли</a>
+    </header>
+
+    <main id="overview" class="grid">
+      <section class="card card--wide">
+        <h2>Системен статус</h2>
+        <div id="health-pill" class="pill">Проверка...</div>
+        <p id="health-text">Изчакване на отговор от backend...</p>
+      </section>
+
+      <section class="card">
+        <h3>Размер на флота</h3>
+        <p class="metric" id="fleet-size">—</p>
+      </section>
+
+      <section class="card">
+        <h3>Прозорци на ден</h3>
+        <p class="metric" id="windows-per-day">—</p>
+      </section>
+
+      <section class="card">
+        <h3>Failure Modes</h3>
+        <p class="metric" id="failure-modes">—</p>
+      </section>
+
+      <section class="card">
+        <h3>Feature Count</h3>
+        <p class="metric" id="feature-count">—</p>
+      </section>
+
+      <section class="card card--wide">
+        <h2>Operating режими</h2>
+        <div id="mode-list" class="chips"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Predictive Maintenance Fleet • Elegant Full-Stack Demo</small>
+    </footer>
+
+    <script src="/app/app.js"></script>
+  </body>
+</html>
