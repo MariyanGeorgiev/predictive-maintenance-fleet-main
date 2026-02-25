@@ -14,10 +14,13 @@
       <div class="hero__badge">Fleet Intelligence Platform</div>
       <h1>Predictive Maintenance Dashboard</h1>
       <p>
-        Красив и изчистен интерфейс за бърз преглед на synthetic data pipeline-а,
-        operating режимите и здравето на backend API.
+        Една страница, от която виждаш дали системата работи, как е вързан pipeline-ът,
+        какъв е крайният резултат за дипломната и как да стартираш проекта локално.
       </p>
-      <a class="hero__cta" href="#overview">Виж детайли</a>
+      <div class="hero__actions">
+        <a class="hero__cta" href="#overview">Преглед</a>
+        <a class="hero__cta hero__cta--ghost" href="#run-guide">Как да го пусна</a>
+      </div>
     </header>
 
     <main id="overview" class="grid">
@@ -25,6 +28,7 @@
         <h2>Системен статус</h2>
         <div id="health-pill" class="pill">Проверка...</div>
         <p id="health-text">Изчакване на отговор от backend...</p>
+        <p id="summary-source" class="status-subtext"></p>
       </section>
 
       <section class="card">
@@ -47,14 +51,34 @@
         <p class="metric" id="feature-count">—</p>
       </section>
 
+      <section class="card">
+        <h3>Rows (sample)</h3>
+        <p class="metric" id="rows-total">—</p>
+      </section>
+
       <section class="card card--wide">
         <h2>Operating режими</h2>
         <div id="mode-list" class="chips"></div>
       </section>
+
+      <section class="card card--wide">
+        <h2>Pipeline (как са вързани модулите)</h2>
+        <ol id="pipeline-steps" class="timeline"></ol>
+      </section>
+
+      <section class="card card--wide">
+        <h2>Краен резултат (дипломна)</h2>
+        <ul id="deliverables" class="deliverables"></ul>
+      </section>
+
+      <section class="card card--wide" id="run-guide">
+        <h2>Как да стартираш локално</h2>
+        <div id="commands" class="commands"></div>
+      </section>
     </main>
 
     <footer>
-      <small>Predictive Maintenance Fleet • Elegant Full-Stack Demo</small>
+      <small>Predictive Maintenance Fleet • Full-Stack Demo UI</small>
     </footer>
 
     <script src="/app/app.js"></script>
